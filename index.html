@@ -1,0 +1,39 @@
+<html>
+
+    <head>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script>
+                $(document).ready(function () {
+                    var i = 0;
+                    setInterval(function() {
+                        i++
+                        rand = Math.floor(Math.random() * 10);
+                        $("#number").html($("#number").html() + "" + rand);
+
+                        if (i % 50 == 0) {
+                            $("#number").html($("#number").html() + "<p>");
+                        }
+
+                        $(document).scrollTop($(document).height());
+                    }, 5);
+                });
+            </script>
+            <style type="text/css">
+                div {
+                    align-content: center;
+                    width: 90%;
+                }
+                body{margin:40px
+auto;max-width:650px;line-height:1.6;font-size:18px;color:#444;padding:0
+10px}h1,h2,h3{line-height:1.2}
+            </style>
+            <title>Number Scroller</title>
+    </head>
+
+    <body>
+        <div>
+            <span id="number"></span>
+        </div>
+    </body>
+
+</html>
